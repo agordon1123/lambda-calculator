@@ -2,10 +2,9 @@ import React from "react";
 
 
 const SpecialButton = (props) => {
-  const buttonContent = props;
   return (
-    <button className='button'>{buttonContent}</button>
+    <button className='button'>{props.number}</button>
     );
-};
+}
 
 export default SpecialButton;
