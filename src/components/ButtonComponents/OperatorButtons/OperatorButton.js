@@ -1,12 +1,10 @@
 import React from "react";
-import { operators } from "./data.js"
 
-const OperatorButton = () => {
+const OperatorButton = (props) => {
+  const buttonContent = props;
   return (
-    <button className='button'>
-      {operators.map(op => {return op})}
-    </button>
+    <button className='button'>{buttonContent}</button>
   );
-};
+}
 
 export default OperatorButton;

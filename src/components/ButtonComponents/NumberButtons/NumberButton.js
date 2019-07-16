@@ -1,12 +1,10 @@
 import React from "react";
-import { numbers } from "./data"
 
-const NumberButton = () => {
+const NumberButton = (props) => {
+  const buttonContent = props;
   return (
-    <button className='button'>
-      {numbers.map(num => {return num})}
-    </button>
-  );
+      <button className='button'>{buttonContent}</button>
+    );
 };
 
 export default NumberButton;

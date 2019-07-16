@@ -1,13 +1,11 @@
 import React from "react";
-import { specials } from "./data.js"
 
 
-const SpecialButton = () => {
+const SpecialButton = (props) => {
+  const buttonContent = props;
   return (
-    <button className='button'>
-      {specials.map(num => {return num})}
-    </button>
-  );
+    <button className='button'>{buttonContent}</button>
+    );
 };
 
 export default SpecialButton;
