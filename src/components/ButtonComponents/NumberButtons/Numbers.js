@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { numbers } from '../../../data';
 import NumberButton from './NumberButton';
 
@@ -6,12 +6,11 @@ import NumberButton from './NumberButton';
 
 //Import your array data to from the provided data file
 
-const Numbers = () => {
-  const [numberState] = useState(numbers)
+const Numbers = (props) => {
   // STEP 2 - add the imported data to state
   return (
-    <div>
-      {numberState.map(number => {return <NumberButton number={number} /> })}
+    <div className='numbers'>
+      {numbers.map(num => {return <NumberButton number={num} display={props.display} setDisplay={props.setDisplay} /> })}
     </div>
   );
 };

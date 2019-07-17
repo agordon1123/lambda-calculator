@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { specials } from '../../../data';
 import SpecialButton from './SpecialButton';
 
@@ -6,13 +6,12 @@ import SpecialButton from './SpecialButton';
 
 //Import your array data to from the provided data file
 
-const Specials = () => {
-  const [specialState] = useState(specials)
+const Specials = (props) => {
   // STEP 2 - add the imported data to state
 
   return (
-    <div>
-      {specialState.map(special => {return <SpecialButton special={special} /> })}
+    <div className='specials'>
+      {specials.map(special => {return <SpecialButton special={special} display={props.display} setDisplay={props.setDisplay} /> })}
     </div>
   );
 };
