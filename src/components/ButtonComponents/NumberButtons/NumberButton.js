@@ -2,7 +2,7 @@ import React from "react";
 
 const NumberButton = (props) => {
   return (
-      <button className='button'>{props.number}</button>
+      <button onClick={() => props.setDisplay(props.number)} className='button'>{props.number}</button>
     );
 };
 

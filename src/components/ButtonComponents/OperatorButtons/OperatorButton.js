@@ -2,7 +2,7 @@ import React from "react";
 
 const OperatorButton = (props) => {
   return (
-    <button className='button'>{props.operator.char}</button>
+    <button onClick={() => props.setDisplay(props.operator.char)} className='button'>{props.operator.char}</button>
   );
 }
 
